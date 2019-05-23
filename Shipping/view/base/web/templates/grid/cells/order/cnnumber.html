@@ -1,0 +1,66 @@
+<form id="blueexshipping_form-<%- orderid %>" method="post" enctype="multipart/form-data" action="<%- formaction %>">
+    <div class="modal-body">
+        <div class="bootbox-body">
+        	
+            <div class="admin__field _required" style="margin-top:20px; display:none;"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Service Type:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                    <select class="bootbox-input bootbox-input-text form-control required-entry" style=" width:100px; border: 1px solid #ccc;padding: 3px 5px;" name="service_type">
+                        <option value="BE">BE</option>
+                        <option value="BG">BG</option>
+                        <option value="BK">BK</option>
+                    </select>
+              	</div>
+            </div>
+            
+			<div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Total Amount:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input bootbox-input-text form-control required-entry check-number total_amount" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="total_amount" value="<%- totalamount %>" />
+              	</div>
+            </div>
+         	
+			<div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Shipping Charges:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input bootbox-input-text form-control required-entry check-number" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="charges" value="0.00" />
+              	</div>
+            </div>
+         	<div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Insurance:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                    <select class="bootbox-input bootbox-input-text form-control required-entry" style=" width:100px; border: 1px solid #ccc;padding: 3px 5px;" name="insurance">
+                        <option value="N">No</option>
+                        <option value="Y">Yes</option>
+                    </select>
+	            </div>
+    		</div>
+            <div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Destination City:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input boxCityList" id="cityList" bootbox-input-text form-control required-entry" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="city" value="" />
+              	</div>
+            </div>
+            <div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">COD Amount:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input bootbox-input-text form-control required-entry check-number" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="cod_amount" value="0.00" />
+              	</div>
+            </div>
+            
+         	<div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Collect Cash:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                    <input type="checkbox" value="Y" name="collect_cash"/>
+                </div>
+            </div>
+            
+            <input type="hidden" name="entity_id" value="<%- orderid %>">         
+        </div>
+    </div>
+    <div class="modal-footer">
+        <span class="error" style="float: left;color: #d00;font-style: italic;font-size: 14px;"></span>
+        <button type="button" class="btn btn-primary btn-submit_blueexshipping" data-id="<%- orderid %>"><span><%- submitlabel %></span></button>
+        <span class="clear"></span>
+    </div>
+</form>

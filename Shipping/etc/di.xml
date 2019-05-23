@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by wilson.sun330@gmail.com
+ * Date: 11/09/2015
+* Time: 5:02 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+	<preference for="Magento\Sales\Controller\Adminhtml\Order\Create\Save" type="BlueEx\Shipping\Controller\Sales\Adminhtml\Order\Create\Save" />
+
+	<!-- Created by saifali.rehman20@gmail.com -->
+
+	<preference for="BlueEx\Shipping\Api\BluexRepositoryInterface" type="BlueEx\Shipping\Model\BluexRepository"/>
+
+	<preference for="BlueEx\Shipping\Api\Data\BluexDataInterface" type="BlueEx\Shipping\Model\Data\BluexData"/>
+
+</config>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BlueEx_Shipping::shipping" title="BlueEx Shipping" module="BlueEx_Shipping" sortOrder="11" resource="BlueEx_Shipping::shipping" />
+    	<add id="BlueEx_Shipping::citylist" title="City List" sortOrder="10" action="blueexshipping/citylist" module="BlueEx_Shipping" parent="BlueEx_Shipping::shipping" resource="BlueEx_Shipping::citylist" />
+	   	<add id="BlueEx_Shipping::tariff" title="Tariff" sortOrder="20" action="blueexshipping/tariff" module="BlueEx_Shipping" parent="BlueEx_Shipping::shipping" resource="BlueEx_Shipping::tariff" />
+	   	<add id="BlueEx_Shipping::settings" title="Settings" sortOrder="30" action="adminhtml/system_config/edit/section/blueex_shipping" module="BlueEx_Shipping" parent="BlueEx_Shipping::shipping" resource="BlueEx_Shipping::settings" />
+	</menu>
+</config>

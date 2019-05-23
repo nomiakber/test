@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- Product Request -->
+     <route url="/V1/BlueEx/ProductRequest/:sku" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getProductRequest"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- Qty Update by SKU -->
+     <route url="/V1/BlueEx/updateProductQty" method="POST">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="updateProductQty"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- Order By Increment ID  -->
+     <route url="/V1/BlueEx/OrderRequest/:id" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getOrderRequest"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- Order By Increment ID  -->
+     <route url="/V1/BlueEx/OrderHistoryRequest/:id" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getFullHistory"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- Product Details By Id  -->
+     <route url="/V1/BlueEx/ProductById/:id" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getProductById"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+
+    <!-- Product Details By Id  -->
+     <route url="/V1/BlueEx/updateOrderItemQty" method="POST">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="updateOrderItemQty"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- Remove SKU from Order  -->
+     <route url="/V1/BlueEx/removeOrderItem" method="POST">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="removeOrderItem"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- add SKU to Order  -->
+     <route url="/V1/BlueEx/addOrderItem" method="POST">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="addOrderItem"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- get child SKU  -->
+
+     <route url="/V1/BlueEx/getConfChild/:sku/children" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getConfChild"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+    <!-- get child SKU  -->
+
+     <route url="/V1/BlueEx/getConfChildById/:id/children" method="GET">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="getConfChildById"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+
+
+    <!-- Delete -->
+    <route url="/V1/bluexapi/:id" method="DELETE">
+        <service class="BlueEx\Shipping\Api\BluexRepositoryInterface" method="delete"/>
+        <resources>
+             <resource ref="BlueEx_Shipping::updateproductapi"/>
+        </resources>
+    </route>
+</routes>

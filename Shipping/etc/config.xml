@@ -1,0 +1,24 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <delete_orders>
+            <module>
+                <type>1</type>
+            </module>
+            <general>
+                <enabled>1</enabled>
+            </general>
+        </delete_orders>
+    </default>
+    <crontab>
+        <jobs>
+            <BlueEx_Shipping>
+                <schedule>
+                    <cron_expr>*/5 * * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>BlueEx/Shipping/Model/Orders::update</model>
+                </run>
+            </BlueEx_Shipping>
+        </jobs>
+    </crontab>
+</config>

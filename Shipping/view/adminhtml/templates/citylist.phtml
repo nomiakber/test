@@ -1,0 +1,17 @@
+<?php 
+	$cities = $this->getCities();
+?>
+<style>
+	.citytable th{ padding:10px; background:#eee;  text-align:left;}
+	.citytable td{  padding:12px 10px 0 10px; text-align:left;  }
+</style>
+<table class="citytable" style="width:40%;">
+	<tr><th>City Name</th><th>City Code</th><th>Country</th></tr>
+    <?php foreach($cities as $city){   ?>
+    	<tr>
+        	<td><?php echo ucfirst($city['city_name']);?></td>
+            <td><?php echo $city['city_code'];?></td>
+            <td>Pakistan</td>      
+       	</tr>
+    <?php } ?>
+</table>

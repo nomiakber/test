@@ -1,0 +1,51 @@
+<?php 
+	$cities = $this->getCities();
+?>
+<form id="tariff_form" method="post" style="min-height:400px;" enctype="multipart/form-data" action="<?php echo $this->getFormurl();?>">
+        <div class="bootbox-body">
+			
+            <div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">City:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                    <select class="bootbox-input bootbox-input-text form-control required-entry" style=" width:200px; border: 1px solid #ccc;padding: 3px 5px;" name="city">
+						<option value="">[Select City]</option>
+						<?php foreach($cities as $city){ ?>
+                        <option value="<?php echo $city['city_code'];?>"><?php echo ucfirst($city['city_name']);?></option>
+                        <?php } ?>
+                    </select>
+	            </div>
+    		</div> 
+        	
+            <div class="admin__field _required" style="margin-top:20px;"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Service Code:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                    <select class="bootbox-input bootbox-input-text form-control required-entry" style=" width:100px; border: 1px solid #ccc;padding: 3px 5px;" name="service_code">
+                        <option value="BG">BG</option>
+                        <option value="BE">BE</option>
+                        <option value="BK">BK</option>
+                    </select>
+              	</div>
+            </div>
+			<div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">Weight:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input bootbox-input-text form-control required-entry check-number" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="weight" value="" />
+              	</div>
+            </div>
+            <div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">CBC Amount:</label>
+              	<div class="admin__field-control" style="display: inline-block;"> 
+                	<input class="bootbox-input bootbox-input-text form-control required-entry check-number" style=" width:100px; border: 1px solid #ccc;padding:5px 6px;" type="text" name="cbc_amount" value="" />
+              	</div>
+            </div>
+
+            <div class="admin__field _required"> 
+           		<label class="admin__field-label" style="display: inline-block;width: 18%;margin-right: 2%;">&nbsp;</label>
+              	<div class="admin__field-control" style="display: inline-block;">
+              		<button type="button" class="btn btn-primary btn-submit_tariff">Submit</button>
+		        </div>
+        	</div>
+        </div>
+    	<span class="error" style=" display:none; float: left; color: rgb(221, 0, 0); font-style: italic; font-size: 14px;margin-left: 10%;border: 1px solid #d00;border-radius: 5px;padding: 10px;width: 50%;margin-top: 25px;"></span>
+        <div class="response" style=" display:none; float: left; color:#444; font-size: 14px;margin-left: 10%;border: 1px solid #ccc;border-radius: 5px;padding: 10px 15px;width: 50%;margin-top: 25px;"></div>        	
+</form>

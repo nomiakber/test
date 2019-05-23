@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<title>
+			BlueEx Shipping - City List
+		</title>
+	</head>
+	<body>
+		<referenceContainer name="content">
+			<block class="Magento\Backend\Block\Template" name="Shipping_citylist" template="BlueEx_Shipping::citylist.phtml"/>
+		</referenceContainer>
+	</body>
+</page>
+  

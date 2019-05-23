@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <actionsColumn name="blueex" class="BlueEx\Shipping\Ui\Component\Listing\Column\Blueex">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="component" xsi:type="string">BlueEx_Shipping/js/grid/columns/cnnumber</item>
+                    <item name="indexField" xsi:type="string">entity_id</item>
+                    <item name="sortable" xsi:type="boolean">false</item>
+                    <item name="label" xsi:type="string" translate="true">BlueEx</item>
+                    <item name="sortOrder" xsi:type="number">213</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="mp_delete">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">ship by blue-ex</item>
+                        <item name="label" xsi:type="string" translate="true">Ship by Blue-ex</item>
+                        <item name="url" xsi:type="url" path="sales/order/massDelete"/>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Ship Orders</item>
+                            <item name="message" xsi:type="string" translate="true">Do you really want to ship this orders?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+        </massaction>
+    </listingToolbar>
+</listing>
